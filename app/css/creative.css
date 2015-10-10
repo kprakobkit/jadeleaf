@@ -474,3 +474,14 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+.map {
+    height: 100%;
+}
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
+
