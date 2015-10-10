@@ -476,12 +476,5 @@ body {
 }
 
 .map {
-    height: 100%;
+  background-color: #79BD70
 }
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
-}
-
