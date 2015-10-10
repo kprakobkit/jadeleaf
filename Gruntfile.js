@@ -15,7 +15,7 @@ module.exports = function(grunt) {
       client: {
         options: {
           port: 9000,
-          base:'target/',
+          base:'app/',
           middleware: livereloadMiddleware
         }
       }
@@ -23,34 +23,10 @@ module.exports = function(grunt) {
     watch: {
       index: {
         files: ['app/index.html'],
-        tasks:['copy'],
-        options: {
-          livereload:LIVERELOAD_PORT
-        }
-      },
-      css: {
-        files: ['app/css/*.scss'],
-        tasks:['sass'],
         options: {
           livereload:LIVERELOAD_PORT
         }
       }
-    },
-    sass: {
-      dist: {
-        options: {
-          style: 'compressed'
-        },
-        files: {
-          'target/main.css':'app/css/style.scss'
-        }
-      }
-    },
-    copy: {
-      main: {
-        src: 'app/index.html',
-        dest: 'target/index.html',
-      },
     }
   });
 

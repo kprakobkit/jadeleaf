@@ -4,5 +4,5 @@ var logger = require('morgan');
 var app = express();
 
 app.use(logger('dev'));
-app.use(gzippo.staticGzip("./target"));
+app.use(gzippo.staticGzip("./app"));
 app.listen(process.env.PORT || 5000);
